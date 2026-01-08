@@ -20,6 +20,14 @@ pipeline {
                 sh './build.sh' 
             } 
         } 
+        stage('Debug Files') {
+    steps {
+        echo 'Listing workspace files...'
+        sh 'ls -la'
+        sh 'pwd'
+    }
+}
+
         stage('Test') { 
             steps { 
                 echo 'Running tests...' 
