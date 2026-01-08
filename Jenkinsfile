@@ -8,7 +8,8 @@ pipeline {
         stage('Checkout') { 
             steps { 
                 git branch: 'main', 
-                    url: 'file:///PATH/TO/YOUR/pipeline-git-repo'  // Update path 
+                    url:'https://github.com/Pravalika7-V/pipeline-git-repo.git'
+
                 echo 'Repository cloned successfully' 
             } 
         } 
