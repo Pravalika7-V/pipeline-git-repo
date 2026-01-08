@@ -13,13 +13,17 @@ pipeline {
                 echo 'Repository cloned successfully' 
             } 
         } 
-        stage('Build') { 
-            steps { 
-                echo 'Building application...'
-                 sh 'chmod +x build.sh'
-                sh './build.sh' 
-            } 
-        } 
+        stage('Build') {
+    steps {
+        echo 'Building application...'
+        sh 'pwd'
+        sh 'ls -la'
+        sh 'find . -name build.sh'
+        sh 'chmod +x build.sh'
+        sh './build.sh'
+    }
+}
+
         stage('Debug Files') {
     steps {
         echo 'Listing workspace files...'
