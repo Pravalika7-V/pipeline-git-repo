@@ -1,4 +1,4 @@
-#!binbash 
+#!/bin/bash 
 echo === Building DevOps Application === 
 echo Compiling source files... 
 find src -name .java  sources.txt 
