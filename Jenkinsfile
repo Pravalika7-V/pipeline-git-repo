@@ -15,14 +15,21 @@ pipeline {
         } 
         stage('Build') {
     steps {
-        echo 'Building application...'
+        echo 'Where am I?'
         sh 'pwd'
+
+        echo 'What files exist here?'
         sh 'ls -la'
+
+        echo 'Search for build.sh'
         sh 'find . -name build.sh'
+
+        echo 'Try running build.sh'
         sh 'chmod +x build.sh'
         sh './build.sh'
     }
 }
+
 
         stage('Debug Files') {
     steps {
